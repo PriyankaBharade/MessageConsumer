@@ -1,0 +1,14 @@
+server:
+  port: 8001
+spring:  rabbitmq:    addresses: localhost:5672
+  datasource:
+    url: jdbc:mysql://localhost:3306/order_databse
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+   hibernate.ddl-auto: update
+   properties:
+     hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect 
+  mvc:    pathmatch:      matching-strategy: ant-path-matcher
